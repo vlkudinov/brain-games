@@ -1,6 +1,6 @@
 {
   "name": "brain-games_vl",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "author": "Vladimir Kudinov",
@@ -21,7 +21,9 @@
     "type": "git",
     "url": "git+https://github.com/vlkudinov/project-lvl1-s232.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
