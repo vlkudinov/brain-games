@@ -1,4 +1,5 @@
-#!/bin/env node
-import game from '..';
+#!/usr/bin/env node
+import start from '..';
 
-game();
+start();
+
