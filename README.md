@@ -5,4 +5,3 @@
 
 npm install -g brain-games-vlk
 
-https://asciinema.org/a/RBmwEFXBm5yuP5onRDHvoOUDN
