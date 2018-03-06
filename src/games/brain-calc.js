@@ -1,14 +1,14 @@
-import math from '../math';
+import calc from '../calculate';
 import game from '..';
 
 const brainCalc = () => {
   const task = 'What is the result of the expression?';
   const operands = ['+', '-', '*'];
-  const number1 = math.randomInteger();
-  const number2 = math.randomInteger();
-  const operand = operands[math.randomElement(operands)];
+  const number1 = calc.randomInteger();
+  const number2 = calc.randomInteger();
+  const operand = operands[calc.randomElement(operands)];
   const question = `${number1} ${operand} ${number2}`;
-  const rightAnswer = String(math.calc(number1, number2, operand));
+  const rightAnswer = String(calc.calc(number1, number2, operand));
 
   return { task, question, rightAnswer };
 };

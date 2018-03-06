@@ -15,5 +15,11 @@ export default {
   isEven(num) {
     return num % 2 === 0;
   },
+  gcd(a, b) {
+    if (b === 0) {
+      return Math.abs(a);
+    }
+    return this.gcd(b, a % b);
+  },
 };
 
