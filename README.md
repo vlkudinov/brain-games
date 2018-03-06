@@ -4,3 +4,5 @@
 [![Build Status](https://travis-ci.org/vlkudinov/project-lvl1-s232.svg?branch=master)](https://travis-ci.org/vlkudinov/project-lvl1-s232)
 
 npm install -g brain-games-vlk
+
+https://asciinema.org/a/RBmwEFXBm5yuP5onRDHvoOUDN
