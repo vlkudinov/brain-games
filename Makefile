@@ -2,7 +2,7 @@ install:
 	npm install
 
 run:
-	npm run babel-node -- src/bin/brain-games.js
+	npm run build
 
 lint:
 	npm run eslint .
