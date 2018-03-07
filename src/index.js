@@ -20,6 +20,8 @@ export default (gameType) => {
       correctAnswers++;
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
+      console.log(`Let's try again, ${name}!`);
+      break;
     }
   }
   if (correctAnswers === 3) {
