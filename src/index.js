@@ -13,10 +13,9 @@ export default (gameType) => {
     const { question, rightAnswer } = gameType();
 
     console.log(`Question: ${question}`);
-
     const userAnswer = readlineSync.question('Your Answer? ');
 
-    if (userAnswer === rightAnswer) {
+    if (userAnswer === String(rightAnswer)) {
       console.log('Correct!');
       correctAnswers++;
     } else {
