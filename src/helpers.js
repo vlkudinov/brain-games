@@ -47,7 +47,7 @@ export default {
       return iter([this.getRandomInt()], 0);
     };
 
-    const removeElement = (arr, index) =>
+    const makeQuestion = (arr, index) =>
       arr.reduce((a, v, i) => {
         if (i === index) {
           return [...a, '..'];
@@ -55,7 +55,7 @@ export default {
         return [...a, v];
       }, []).join(' ');
 
-    return { generateArr, removeElement };
+    return { generateArr, makeQuestion };
   },
 };
 
