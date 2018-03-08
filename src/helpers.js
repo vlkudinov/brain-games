@@ -13,9 +13,6 @@ export default {
   getRandomElement(arr) {
     return Math.floor(Math.random() * arr.length);
   },
-  isEven(num) {
-    return num % 2 === 0;
-  },
   getGCD(a, b) {
     if (b === 0) {
       return Math.abs(a);
@@ -56,6 +53,22 @@ export default {
       }, []).join(' ');
 
     return { generateArr, makeQuestion };
+  },
+  isEven(num) {
+    return num % 2 === 0;
+  },
+  isPrime(num) {
+    if (num < 2) {
+      return false;
+    }
+
+    for (let i = 2; i < num; i += 1) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+
+    return true;
   },
 };
 
