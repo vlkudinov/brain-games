@@ -4,7 +4,6 @@ import readlineSync from 'readline-sync';
 export default (gameType) => {
   const { task } = gameType();
 
-  console.log(banner);
   console.log(`Welcome to the Brain Games!\n${task}\n`);
   const name = readlineSync.question('May I have your name? ') || 'Anonymous';
   console.log(`Hello, ${name}\n`);
@@ -20,10 +19,10 @@ export default (gameType) => {
     }
     if (userAnswer === rightAnswer) {
       console.log('Correct!');
-      return engine(gameType, rightAnswers+1);
+      return engine(gameType, rightAnswers + 1);
     }
     console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`);
     return false;
   };
-  return engine(gameType, 1)
+  return engine(gameType, 1);
 };

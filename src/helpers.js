@@ -35,15 +35,27 @@ export default {
     return this.getBalance(+arr.join(''));
   },
   getAP() {
-    const step = this.getRandomInt(5) + 2;
+    const generateArr = () => {
+      const step = this.getRandomInt(5) + 2;
 
-    const iter = (acc, i) => {
-      if (i >= 9) {
-        return acc;
-      }
-      return iter([...acc, acc[i] + step], i+1);
+      const iter = (acc, i) => {
+        if (i >= 9) {
+          return acc;
+        }
+        return iter([...acc, acc[i] + step], i + 1);
+      };
+      return iter([this.getRandomInt()], 0);
     };
-    return iter([this.getRandomInt()], 0);
+
+    const removeElement = (arr, index) =>
+      arr.reduce((a, v, i) => {
+        if (i === index) {
+          return [...a, '..'];
+        }
+        return [...a, v];
+      }, []).join(' ');
+
+    return { generateArr, removeElement };
   },
 };
 
