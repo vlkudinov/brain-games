@@ -1,28 +1,64 @@
-import readlineSync from 'readline-sync';
+import show from './ui';
+import brainEven from './games/brain-even';
+import brainCalc from './games/brain-calc';
+import brainBalance from './games/brain-balance';
+import brainGCD from './games/brain-gcd';
+import brainProgression from './games/brain-progression';
+import brainPrime from './games/brain-prime';
 
+export const chooseGame = (num) => {
+  switch (num) {
+    case 0: return brainEven();
+    case 1: return brainCalc();
+    case 2: return brainBalance();
+    case 3: return brainGCD();
+    case 4: return brainProgression();
+    case 5: return brainPrime();
+    default: return 0;
+  }
+};
 
-export default (gameType) => {
+show.banner();
+const userName = show.userName();
+show.greetings(userName);
+
+const gameEngine = (gameType) => {
   const { task } = gameType();
+  show.task(task);
 
-  console.log(`Welcome to the Brain Games!\n${task}\n`);
-  const name = readlineSync.question('May I have your name? ') || 'Anonymous';
-  console.log(`Hello, ${name}\n`);
-
-  const engine = (data, rightAnswers) => {
+  const iter = (data, rightAnswers) => {
     const { question, rightAnswer } = data();
-    console.log(`Question: ${question}`);
-    const userAnswer = readlineSync.question('Your Answer? ');
+    show.question(question);
+    const userAnswer = show.userAnswer();
 
     if (rightAnswers === 3) {
-      console.log(`Congratulations, ${name}!`);
+      show.congratulate(userName);
       return true;
     }
+
     if (userAnswer === rightAnswer) {
-      console.log('Correct!');
-      return engine(gameType, rightAnswers + 1);
+      show.rightAnswerMessage();
+      return iter(gameType, rightAnswers + 1);
     }
-    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.\nLet's try again, ${name}!`);
+    show.wrongAnswerMessage(userName, userAnswer, rightAnswer);
     return false;
   };
-  return engine(gameType, 1);
+  return iter(gameType, 1);
 };
+
+const gameInterface = () => {
+  const userChoice = show.menu();
+
+  if (userChoice >= 0) {
+    show.startMessage(userChoice);
+    gameEngine(chooseGame(userChoice));
+  } else {
+    show.bye(userName);
+    return false;
+  }
+  show.retry(userName, gameInterface);
+  return true;
+};
+
+export default gameInterface;
+

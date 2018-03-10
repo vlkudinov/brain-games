@@ -1,5 +1,4 @@
 import helpers from '../helpers';
-import game from '..';
 
 const brainBalance = () => {
   const task = 'Balance the given number.';
@@ -10,4 +9,4 @@ const brainBalance = () => {
   return { task, question, rightAnswer };
 };
 
-export default () => game(brainBalance);
+export default () => brainBalance;

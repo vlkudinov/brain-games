@@ -1,5 +1,4 @@
 import helpers from '../helpers';
-import game from '..';
 
 const brainProgression = () => {
   const { generateArr, makeQuestion } = helpers.getAP();
@@ -12,4 +11,4 @@ const brainProgression = () => {
   return { task, question, rightAnswer };
 };
 
-export default () => game(brainProgression);
+export default () => brainProgression;

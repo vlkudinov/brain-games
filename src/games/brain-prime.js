@@ -1,5 +1,4 @@
 import helpers from '../helpers';
-import game from '..';
 
 const brainPrime = () => {
   const task = 'Answer "yes" if number is prime otherwise answer "no".';
@@ -9,4 +8,4 @@ const brainPrime = () => {
   return { task, question, rightAnswer };
 };
 
-export default () => game(brainPrime);
+export default () => brainPrime;

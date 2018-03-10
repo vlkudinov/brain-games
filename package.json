@@ -1,18 +1,12 @@
 {
   "name": "brain-games-vlk",
-  "version": "0.9.1",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "author": "Vladimir Kudinov",
   "license": "ISC",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js",
-    "brain-calc": "dist/bin/brain-calc.js",
-    "brain-gcd": "dist/bin/brain-gcd.js",
-    "brain-balance": "dist/bin/brain-balance.js",
-    "brain-progression": "dist/bin/brain-progression.js",
-    "brain-prime": "dist/bin/brain-progression.js"
+    "brain-games": "dist/bin/brain-games.js"
   },
   "files": [
     "dist"
@@ -26,10 +20,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vlkudinov/project-lvl1-s232.git"
+    "url": "git+https://github.com/vlkudinov/brain-games.git"
   },
   "dependencies": {
-    "hexlet-pairs": "^1.0.5",
+    "colors": "^1.2.0",
     "readline-sync": "^1.4.9"
   },
   "devDependencies": {

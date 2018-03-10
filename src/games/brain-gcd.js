@@ -1,5 +1,4 @@
 import helpers from '../helpers';
-import game from '..';
 
 const brainGCD = () => {
   const task = 'Find the greatest common divisor of given numbers.';
@@ -11,4 +10,4 @@ const brainGCD = () => {
   return { task, question, rightAnswer };
 };
 
-export default () => game(brainGCD);
+export default () => brainGCD;
