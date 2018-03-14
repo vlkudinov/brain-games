@@ -1,5 +1,6 @@
 # Brain Games
 [![Maintainability](https://api.codeclimate.com/v1/badges/3957c879b285b8927710/maintainability)](https://codeclimate.com/github/vlkudinov/brain-games/maintainability)
+[![npm version](https://badge.fury.io/js/brain-games-vlk.svg)](https://badge.fury.io/js/brain-games-vlk)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/3957c879b285b8927710/test_coverage)](https://codeclimate.com/github/vlkudinov/brain-games/test_coverage)
 [![Build Status](https://travis-ci.org/vlkudinov/brain-games.svg?branch=master)](https://travis-ci.org/vlkudinov/brain-games)
 
